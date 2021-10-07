@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+.content-container{
+  z-index : 99999;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.particles-container{
+  z-index: 1 !important; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MuiTypography-root{
+  font-family: 'Source Code Pro', monospace !important;
+  color: aliceblue;
+}
+.MuiTypography-h1{
+  font-weight: 300 !important;
+  font-size: 40px !important;
+  letter-spacing: -3px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MuiTypography-body1{
+  font-weight: 100 !important;
+  font-size: 14px !important;
+}
+
+.info-box{
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 10px;
+}
+
+.project-box{
+  width: 30%;
+  height: 40%;
+  position: absolute;
+  margin-top: 200px;
+}
+
+.project-page{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about-box{
+  width: 30%;
+  height: 50%;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.MuiCard-root{
+  background-color: rgba(56, 56, 56, 0.563) !important;
+}
+
+.MuiAppBar-root{
+  background-color: rgba(56, 56, 56, 0.563) !important;
+}
+
+.appbar-toolbar{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.slide-enter,
+.slide-exit {
+  transition: transform 500ms ease-out;
+}
+
+.slide-enter {
+  position: absolute;
+  width: 100%;
+  transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  position: absolute;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(100%);
 }
