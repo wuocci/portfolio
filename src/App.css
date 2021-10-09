@@ -1,66 +1,78 @@
-.content-container{
-  z-index : 99999;
+.content-container {
+  z-index: 99999;
 }
 
-.particles-container{
-  z-index: 1 !important; 
+.particles-container {
+  z-index: 1 !important;
 }
 
-.MuiTypography-root{
-  font-family: 'Source Code Pro', monospace !important;
+.MuiTypography-root {
+  font-family: "Source Code Pro", monospace !important;
   color: aliceblue;
 }
-.MuiTypography-h1{
+.MuiTypography-h1 {
   font-weight: 300 !important;
   font-size: 40px !important;
   letter-spacing: -3px !important;
 }
 
-.MuiTypography-body1{
+.MuiTypography-body1 {
   font-weight: 100 !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 
-.info-box{
-  width: 50%;
+.info-box {
+  width: 60%;
   height: 40%;
   position: absolute;
   margin-top: 20%;
   margin-left: 10px;
 }
 
-.project-box{
-  width: 30%;
-  height: 40%;
+.project-box {
+  display: flex;
+  justify-content: inherit;
+  flex-direction: row;
   position: absolute;
+  width: 75%;
   margin-top: 200px;
 }
 
-.project-page{
+.project-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about-box{
+.project-box img {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.about-box {
   width: 30%;
   height: 50%;
   position: absolute;
 }
 
-
-.MuiCard-root{
+.MuiCard-root {
   background-color: rgba(56, 56, 56, 0.563) !important;
+  margin-right: 10px !important;
+  width: 60% !important;
 }
 
-.MuiAppBar-root{
-  background-color: rgba(56, 56, 56, 0.563) !important;
+.MuiCardActions-root {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-end !important;
 }
 
-.appbar-toolbar{
+.appbar {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  margin-top: 10px;
 }
 
 .slide-enter,
@@ -86,4 +98,21 @@
 
 .slide-exit-active {
   transform: translateX(100%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    margin-top: 200px;
+  }
+  .MuiCard-root {
+    background-color: rgba(56, 56, 56, 0.563) !important;
+    margin-bottom: 10px !important;
+    width: 60% !important;
+  }
 }
