@@ -1,17 +1,28 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import { Button, Icon } from "semantic-ui-react";
 import Typography from "@mui/material/Typography";
-import React from "react";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 const AboutBox = () => {
+  const [progress, setProgress] = useState(0);
   let history = useHistory();
 
   const handleRouteProjects = () => {
     history.push("/projects");
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 10 : prevProgress + 40
+      );
+    }, 800);
+  }, []);
 
   return (
     <div className="about-box">
@@ -44,6 +55,17 @@ const AboutBox = () => {
             </Button.Content>
           </Button>
         </CardActions>
+        <div className="progress-bars">
+          <ProgressBar label="HTML" now={progress + 40} />
+          <ProgressBar label="CSS" now={progress + 40} />
+          <ProgressBar label="React" now={progress + 30} />
+          <ProgressBar label="Javascript" now={progress + 30} />
+          <ProgressBar label="Figma" now={progress + 30} />
+          <ProgressBar label="NodeJS" now={progress + 20} />
+          <ProgressBar label="UX/UI Design" now={progress + 20} />
+          <ProgressBar label="Python" now={progress + 10} />
+          <ProgressBar label="Java" now={progress + 10} />
+        </div>
       </Card>
     </div>
   );

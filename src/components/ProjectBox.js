@@ -26,7 +26,7 @@ const ProjectBox = () => {
     {
       name: "Metku",
       info: "Deisgn and production of accessible website for South-Karelias' Children's Culture Center. Tech used: Wordpress/Elementor & Figma in design",
-      links: ["", "www.lastenmetku.fi"],
+      links: ["", "http://www.lastenmetku.fi"],
       img: metku,
     },
   ];
