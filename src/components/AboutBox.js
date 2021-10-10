@@ -6,14 +6,25 @@ import { Button, Icon } from "semantic-ui-react";
 import Typography from "@mui/material/Typography";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import CVurl from "../resources/CV.pdf";
+import axios from "axios";
 
 const AboutBox = () => {
   const [progress, setProgress] = useState(0);
-  let history = useHistory();
 
-  const handleRouteProjects = () => {
-    history.push("/projects");
+  const handleGitRoute = () => {
+    window.open("https://github.com/wuocci");
+  };
+
+  const handleCVClick = () => {
+    var fileDownload = require("js-file-download");
+    axios
+      .get(CVurl, {
+        responseType: "blob",
+      })
+      .then((res) => {
+        fileDownload(res.data, "hw_cv.pdf");
+      });
   };
 
   useEffect(() => {
@@ -37,21 +48,27 @@ const AboutBox = () => {
         </CardContent>
         <CardActions>
           <Button
-            onClick={handleRouteProjects}
+            onClick={handleGitRoute}
             basic
             animated
             color="orange"
             size="big"
           >
-            <Button.Content visible>My projects</Button.Content>
+            <Button.Content visible>Github Repo</Button.Content>
             <Button.Content hidden>
-              <Icon name="hand point right" />
+              <Icon name="github" />
             </Button.Content>
           </Button>
-          <Button basic animated color="orange" size="big">
-            <Button.Content visible>About me</Button.Content>
+          <Button
+            onClick={handleCVClick}
+            basic
+            animated
+            color="orange"
+            size="big"
+          >
+            <Button.Content visible>CV</Button.Content>
             <Button.Content hidden>
-              <Icon name="hand point right" />
+              <Icon name="download" />
             </Button.Content>
           </Button>
         </CardActions>

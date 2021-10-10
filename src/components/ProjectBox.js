@@ -6,13 +6,15 @@ import { Button, Icon } from "semantic-ui-react";
 import Typography from "@mui/material/Typography";
 import metku from "../img/lastenMetku.png";
 import manse from "../img/manse.png";
+import recipe from "../img/recipe.png";
 
 const ProjectBox = () => {
   const projects = [
     {
       name: "RecipeBox",
-      info: "MERN Stack based recipe app. Tech used: ReactJS, ExpressJS, NodeJS, MongoDB",
+      info: "MERN Stack based recipe app. App is still in development and at the moment there is no demo. Tech used: ReactJS, ExpressJS, NodeJS, MongoDB",
       links: ["https://github.com/wuocci/recipes", ""],
+      img: recipe,
     },
     {
       name: "Tampere Pub Generator",
