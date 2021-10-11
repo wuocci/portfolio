@@ -5,7 +5,6 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import HomePage from "./pages/HomePage";
 import ParticlesOnScreen from "./components/ParticlesOnScreen";
 import ProjectPage from "./pages/ProjectPage";
-import MenuBar from "./components/MenuBar";
 import AboutPage from "./pages/AboutPage";
 
 const App = () => {
